@@ -39,6 +39,7 @@ const EditModal: React.FC<EditModalProps> = ({ item, open, onClose, onSave }) =>
           onChange={(e) => setName(e.target.value)}
           fullWidth
           margin="normal"
+          data-cy="input-name"
         />
         <TextField
           label="Описание"
@@ -46,12 +47,13 @@ const EditModal: React.FC<EditModalProps> = ({ item, open, onClose, onSave }) =>
           onChange={(e) => setDescription(e.target.value)}
           fullWidth
           margin="normal"
+          data-cy="input-description"
         />
         <Box className={styles.buttonContainer}>
-          <Button onClick={onClose} color="secondary" variant="outlined" sx={{ mr: 1 }}>
+          <Button onClick={onClose} color="secondary" variant="outlined" sx={{ mr: 1 }} data-cy="button-cancel">
             Отмена
           </Button>
-          <Button onClick={handleSave} color="primary" variant="contained">
+          <Button onClick={handleSave} color="primary" variant="contained" data-cy="button-save">
             Сохранить
           </Button>
         </Box>

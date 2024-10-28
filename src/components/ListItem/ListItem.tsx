@@ -22,11 +22,11 @@ const ListItem: React.FC<Props> = ({ item }) => {
   };
 
   return (
-    <div className={styles.listItem}>
-      <h4 className={styles.itemName}>{item.name}</h4>
-      <p className={styles.itemDescription}>{item.description}</p>
-      <button className={styles.button} onClick={() => setModalOpen(true)}>Редактировать</button>
-      <button className={styles.button} onClick={handleDelete}>Удалить</button>
+    <div className={styles.listItem} data-cy="list-item">
+      <h4 className={styles.itemName} data-cy="item-name">{item.name}</h4>
+      <p className={styles.itemDescription} data-cy="item-description">{item.description}</p>
+      <button className={styles.button} onClick={() => setModalOpen(true)} data-cy="edit-button">Редактировать</button>
+      <button className={styles.button} onClick={handleDelete} data-cy="delete-button">Удалить</button>
 
       {}
       <EditModal

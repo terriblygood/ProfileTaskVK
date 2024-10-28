@@ -45,6 +45,16 @@ export class ListStore {
     }
   }
 
+  addItem(name: string, description: string) {
+    const newItem: ListItem = {
+      id: Date.now(),
+      name,
+      description
+    };
+    this.items = [newItem, ...this.items];
+    this.sortItems();
+  }
+
   removeItem(id: number) {
     this.items = this.items.filter((item) => item.id !== id);
   }

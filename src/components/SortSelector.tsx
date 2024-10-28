@@ -17,6 +17,7 @@ const SortSelector: React.FC<SortSelectorProps> = ({ store }) => {
       onChange={handleChange}
       style={{ width: 200 }}
       displayEmpty
+      data-cy="sort-selector"
     >
       <MenuItem value="name">Name</MenuItem>
       <MenuItem value="description">Description</MenuItem>
