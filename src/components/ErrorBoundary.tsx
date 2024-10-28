@@ -1,4 +1,3 @@
-// src/components/ErrorBoundary.tsx
 import React, { useState, useEffect } from 'react';
 
 interface ErrorBoundaryProps {
@@ -9,13 +8,13 @@ const ErrorBoundary: React.FC<ErrorBoundaryProps> = ({ children }) => {
   const [hasError, setHasError] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
 
-  // Обработка ошибок
+
   const handleError = (error: Error) => {
     setHasError(true);
     setErrorMessage(error.message);
   };
 
-  // Установка обработчика ошибок
+  
   useEffect(() => {
     const errorHandler = (event: ErrorEvent) => {
       handleError(new Error(event.message));

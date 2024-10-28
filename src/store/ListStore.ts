@@ -1,4 +1,3 @@
-// src/store/ListStore.ts
 import { makeAutoObservable } from 'mobx';
 import { createContext, useContext } from 'react';
 
@@ -38,7 +37,7 @@ export class ListStore {
       this.items = [...this.items, ...newItems];
       this.page += 1;
       this.hasMore = newItems.length > 0;
-      this.sortItems(); // Сортируем элементы после добавления
+      this.sortItems();
     } catch (error) {
       console.error("Failed to load items", error);
     } finally {
@@ -56,12 +55,12 @@ export class ListStore {
       item.name = newName;
       item.description = newDescription;
     }
-    this.sortItems(); // Сортировка после редактирования элемента
+    this.sortItems();
   }
 
   setSortField(field: SortField) {
     this.sortField = field;
-    this.sortItems(); // Пересортировка при изменении поля сортировки
+    this.sortItems();
   }
 
   sortItems() {

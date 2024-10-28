@@ -1,4 +1,3 @@
-// src/__tests__/EditModal.test.tsx
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import EditModal from '../components/EditModal/EditModal';
@@ -11,7 +10,7 @@ describe('EditModal', () => {
     render(
       <EditModal
         item={{ id: 1, name: 'JavaScript', description: 'No description' }}
-        open={true} // Убедитесь, что open передан
+        open={true}
         onClose={mockOnClose}
         onSave={mockOnSave}
       />

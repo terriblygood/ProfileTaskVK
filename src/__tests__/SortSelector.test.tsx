@@ -1,7 +1,6 @@
-// src/__tests__/SortSelector.test.tsx
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
-import { ListStore } from '../store/ListStore'; // Импортируйте ListStore
+import { ListStore } from '../store/ListStore';
 import SortSelector from '../components/SortSelector';
 import { observer } from 'mobx-react-lite';
 

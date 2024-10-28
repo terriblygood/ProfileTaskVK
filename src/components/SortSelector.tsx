@@ -1,10 +1,9 @@
-// src/components/SortSelector.tsx
 import React from 'react';
 import { Select, MenuItem, SelectChangeEvent } from '@mui/material';
 import { ListStore, SortField } from '../store/ListStore';
 
 interface SortSelectorProps {
-  store: ListStore; // Добавляем store как обязательный пропс
+  store: ListStore;
 }
 
 const SortSelector: React.FC<SortSelectorProps> = ({ store }) => {

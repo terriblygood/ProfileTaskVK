@@ -1,8 +1,7 @@
-// src/components/ListItem.tsx
 import React, { useState } from 'react';
 import { ListItem as ItemType } from '../../store/ListStore';
 import { useListStore } from '../../store/ListStore';
-import EditModal from '../EditModal/EditModal'; // Импортируем модалку
+import EditModal from '../EditModal/EditModal';
 import styles from './ListItem.module.scss'; 
 
 interface Props {
@@ -19,7 +18,7 @@ const ListItem: React.FC<Props> = ({ item }) => {
 
   const handleEdit = (name: string, description: string) => {
     listStore.editItem(item.id, name, description);
-    setModalOpen(false); // Закрываем модалку после сохранения
+    setModalOpen(false);
   };
 
   return (
@@ -29,7 +28,7 @@ const ListItem: React.FC<Props> = ({ item }) => {
       <button className={styles.button} onClick={() => setModalOpen(true)}>Редактировать</button>
       <button className={styles.button} onClick={handleDelete}>Удалить</button>
 
-      {/* Отображаем модалку для редактирования */}
+      {}
       <EditModal
         item={item}
         open={modalOpen}
